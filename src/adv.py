@@ -39,6 +39,8 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+name_input = input("Welcome to the game!\nWhat is your name?\n")
+player = Player(name_input, 'outside')
 
 
 # Write a loop that:
