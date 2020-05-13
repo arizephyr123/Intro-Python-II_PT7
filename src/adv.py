@@ -53,3 +53,11 @@ player = Player(name_input, 'outside')
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+while True:
+    move = input(
+        f"{name_input}, your location is: {player.location}\nWhich direction would you like to move next?")
+
+    if move == "q" or move == "quit":
+        print("Goodbye")
+        exit(0)
