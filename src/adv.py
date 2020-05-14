@@ -1,6 +1,6 @@
 from room import Room
 from player import Player
-# from item importh Item
+from item import Item
 # Declare all the rooms
 
 room = {
@@ -55,9 +55,12 @@ player = Player(name_input, 'outside')
 # If the user enters "q", quit the game.
 
 while True:
-    move = input(
+    cmd = input(
         f"{name_input}, your location is: {player.location}\nWhich direction would you like to move next?")
 
-    if move == "q" or move == "quit":
+    if cmd == "q" or cmd == "quit":
         print("Goodbye")
         exit(0)
+
+    else:
+        print("I did not understand that command\n")
