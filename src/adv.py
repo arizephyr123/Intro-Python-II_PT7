@@ -8,7 +8,7 @@ room = {
                      "North of you, the cave mount beckons"),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
-passages run north and east."""),
+passages run north and east.""", Item("candlestick", "It's a candlestick.")),
 
     'overlook': Room("Grand Overlook", """A steep cliff appears before you, falling
 into the darkness. Ahead to the north, a light flickers in
@@ -55,11 +55,13 @@ player = Player(name_input, room["outside"], [])
 #
 # If the user enters "q", quit the game.
 
+
 directions = ['n', 'north', 's', 'south', 'e', 'east', 'w', 'west']
 
 while True:
+
     cmd = input(
-        f"{player.name}, you are in the {player.location.name}:\n{player.location.description}..\n\nWhich direction would you like to move next?\n").lower()
+        f"{player.name}, you are in the {player.location.name}\nItems inside:{player.location.items}\n{player.location.description}..\n\nWhich direction would you like to move next?\n").lower()
 
     if cmd in directions:
         player.travel(cmd)

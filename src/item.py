@@ -1,12 +1,8 @@
 
 class Item:
-    def __init__(self, name, owner, is_available=True):
+    def __init__(self, name, description):
         self.name = name
-        self.owner = owner
-        self.is_available = is_available
+        self.description = description
 
     def __str__(self):
-        if self.is_available == True:
-            return f"{self.name} is in the {self.owner}"
-        else:
-            return f"{self.name} is in {self.owner}'s inventory.'"
+        return f"\n{self.name}: {self.description}\n"
