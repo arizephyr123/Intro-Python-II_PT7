@@ -1,0 +1,13 @@
+
+* Created Player and Room classes
+
+* Create the REPL command parser 
+    - collect player name input that creates an instance of Player classes
+    
+    - loop prints player's room and description
+
+    - asks for user input command, saved as cmd
+
+    - if 'q' or 'quit', says goodbye and exits
+
+    - 
